@@ -1,6 +1,15 @@
-FROM node:9-slim
+FROM node:13-slim
+
 WORKDIR /app
-COPY package.json ./app
+
+COPY package*.json ./
+
 RUN npm install
-COPY . ./app
+
+RUN npm install nodemon -g --save
+
+COPY . .
+
 CMD ["npm", "start"]
+
+EXPOSE 3000

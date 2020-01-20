@@ -1,7 +1,7 @@
 const routes = require("express").Router()
 
-routes.get('/', (req,res) => {
-    res.send('Oszzi sssssaaas')
-})
+const TradutorController = require("./app/controllers/TradutorController")
+
+routes.get('/:numero', TradutorController.traduz)
 
 module.exports = routes

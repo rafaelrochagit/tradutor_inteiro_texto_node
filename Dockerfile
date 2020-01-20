@@ -6,10 +6,11 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN npm install nodemon -g --save
+#necessario para nodemon ficar acessivel globalmente (-g faz isso)
+RUN npm install nodemon -g
 
 COPY . .
 
-CMD ["npm", "start"]
+CMD ["npm", "dev"]
 
 EXPOSE 3000

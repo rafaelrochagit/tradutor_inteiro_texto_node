@@ -1,10 +1,14 @@
-version: "3"
+# versao com base no docker version 
+# encontra a versao aqui https://docs.docker.com/compose/compose-file/
+version: "3.7"
 
 services:
     app:
+        #path do projeto a ser buildado
         build: .
         command: npm start
         ports:
             - "3000:3000"
+        # volume no container a ser gerado. Ao ser gerado o container o projeto ficar na pasta app
         volumes:
             - .:/app

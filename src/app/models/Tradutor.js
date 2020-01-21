@@ -44,7 +44,7 @@ class Tradutor {
 
         const unidadeDeMilhar = this.numeroStringPositivo[this.tamanhoNumero - 4]
         
-        if (unidadeDeMilhar == "0") return 'mil'
+        if (unidadeDeMilhar == "0" || unidadeDeMilhar == "1") return 'mil'
 
         const unidadeString = TradutorHelper.getStrUnidade(unidadeDeMilhar)
 

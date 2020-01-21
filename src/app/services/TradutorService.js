@@ -14,7 +14,7 @@ class TradutorService {
         ]
 
         const index = numeros.indexOf(numero)
-        return traducoes[index]
+        return traducoes[index] || ''
     }
 }
 

@@ -93,6 +93,10 @@ class Tradutor {
         return unidadeString.length > 0 ? unidadeString : ''
     }
 
+/*     getExtenso() {
+        let sinal =
+    } */
+
 }
 
 module.exports = Tradutor

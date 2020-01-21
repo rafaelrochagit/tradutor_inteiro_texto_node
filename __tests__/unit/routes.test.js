@@ -1,9 +1,10 @@
 const request = require("supertest")
 const app = require("../../src/app")
+const IntegerHelper = require("../../../../src/app/helpers/IntegerHelper")
 
 describe('GET /', () => {
     it('Deve receber uma requisição GET com um parametro inteiro', async () => {
-        let parameter = 13
+        let parameter = IntegerHelper.getRandomIntInclusive(-1000,10000)
         const response = await request(app)
             .get('/' + parameter)
             .send()
@@ -30,7 +31,7 @@ describe('GET /', () => {
     })
 
     it('parametro deve ser um inteiro entre -99999 e 99999', async () => {
-        let parameter = 99999
+        let parameter = IntegerHelper.getRandomIntInclusive(-99999,99999)
         const response = await request(app)
             .get('/' + parameter)
             .send()
@@ -39,7 +40,7 @@ describe('GET /', () => {
     })
 
     it('parametro não pode ser um inteiro maior que 99999', async () => {
-        let parameter = 100000
+        let parameter = IntegerHelper.getRandomIntInclusive(99999,1000000)
         const response = await request(app)
             .get('/' + parameter)
             .send()
@@ -48,7 +49,7 @@ describe('GET /', () => {
     })
 
     it('parametro não pode ser um inteiro menor que -99999', async () => {
-        let parameter = -100000
+        let parameter = IntegerHelper.getRandomIntInclusive(-100000000 , -100000)
         const response = await request(app)
             .get('/' + parameter)
             .send()
@@ -57,7 +58,7 @@ describe('GET /', () => {
     })
 
     it('parametro invalido retornar um json com mensagem de validacao', async () => {
-        let parameter = -100000
+        let parameter = IntegerHelper.getRandomIntInclusive(-100000000 , -1000000)
         const response = await request(app)
             .get('/' + parameter)
             .send()

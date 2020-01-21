@@ -26,3 +26,14 @@ describe('IntegerHelper.isInteger', () => {
         expect(IntegerHelper.isInteger(valor)).toBe(false)
     })
 })
+
+describe('IntegerHelper.isInteger', () => {
+    it('retorna true se um numero inteiro é passado', () => {
+        const min = 10
+        const max = 30
+        const result = IntegerHelper.getRandomIntInclusive(min, max)
+        expect(result).toBeGreaterThanOrEqual(min)
+        expect(result).toBeLessThanOrEqual(max)
+
+    })
+})

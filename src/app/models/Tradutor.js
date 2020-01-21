@@ -44,7 +44,7 @@ class Tradutor {
         } 
 
         if (IntegerHelper.getTamanho(this.numeroInteiroPositivo) == 4 && unidadeDeMilhar == 1) return 'mil'
-        
+
         if (unidadeDeMilhar == "0") return 'mil'
 
         const unidadeString = TradutorHelper.getStrUnidade(unidadeDeMilhar)
@@ -110,7 +110,11 @@ class Tradutor {
 
         let extenso = sinal.length ? sinal + ' ' : sinal;
         extenso += dezenaDeMilhar;
-        extenso += dezenaDeMilhar.length && unidadeDeMilhar.length ? ' e ' + unidadeDeMilhar : unidadeDeMilhar
+        
+        extenso += dezenaDeMilhar.length && unidadeDeMilhar.length  && unidadeDeMilhar != 'mil' ? ' e ' + unidadeDeMilhar :  ''
+        extenso += !dezenaDeMilhar.length && unidadeDeMilhar.length ? unidadeDeMilhar :  ''
+        extenso += dezenaDeMilhar.length && unidadeDeMilhar.length && unidadeDeMilhar == 'mil' ? ' mil' :  ''
+
         extenso += (dezenaDeMilhar.length || unidadeDeMilhar.length) && centena.length ? ' e ' + centena : centena
         extenso += (dezenaDeMilhar.length || unidadeDeMilhar.length || centena.length) && dezena.length ? ' e ' + dezena : dezena
         extenso += (dezenaDeMilhar.length || unidadeDeMilhar.length || centena.length || dezena.length) && unidade.length ? ' e ' + unidade : unidade

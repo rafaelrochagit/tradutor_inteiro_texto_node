@@ -6,7 +6,7 @@ services:
     app:
         #path do projeto a ser buildado
         build: .
-        command: npm run dev
+        command: npm start
         ports:
             - "3000:3000"
         # volume no container a ser gerado. Ao ser gerado o container o projeto ficar na pasta app

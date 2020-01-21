@@ -25,7 +25,7 @@ sudo systemctl enable docker
 docker-compose up
 ```
 
-## Chmando API
+## Chamando API
 
 ```
 λ curl http://localhost:3000/1
@@ -40,4 +40,10 @@ docker-compose up
 ```
 λ curl http://localhost:3000/94587
 { "extenso": "noventa e quatro mil e quinhentos e oitenta e sete" }
+```
+
+## Rodando TESTE
+
+```
+yarn test
 ```

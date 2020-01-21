@@ -36,15 +36,16 @@ class Tradutor {
 
     getUnidadeDeMilhar() {
         if (IntegerHelper.getTamanho(this.numeroInteiroPositivo) < 4) return ''
+        const unidadeDeMilhar = this.numeroStringPositivo[this.tamanhoNumero - 4]
 
         if (IntegerHelper.getTamanho(this.numeroInteiroPositivo) >= 4) {
             const dezenaDeMilhar = this.numeroStringPositivo[this.tamanhoNumero - 5]
             if (dezenaDeMilhar == 1) return ''
         } 
 
-        const unidadeDeMilhar = this.numeroStringPositivo[this.tamanhoNumero - 4]
+        if (IntegerHelper.getTamanho(this.numeroInteiroPositivo) == 4 && unidadeDeMilhar == 1) return 'mil'
         
-        if (unidadeDeMilhar == "0" || unidadeDeMilhar == "1") return 'mil'
+        if (unidadeDeMilhar == "0") return 'mil'
 
         const unidadeString = TradutorHelper.getStrUnidade(unidadeDeMilhar)
 

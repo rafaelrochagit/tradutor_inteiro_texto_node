@@ -44,7 +44,7 @@ describe('Tradutor.getDezenaDeMilhar', () => {
 
 describe('Tradutor.getUnidadeDeMilhar', () => {
     it('deve retornar a unidade de milhar do numero passado no construtor do model Tradutor', () => {
-        const numeros = [5, -12, 64, 111, -6234, 14513, -56325, 1500]
+        const numeros = [5, -12, 64, 111, -6234, 14513, -56325, 1500, 21000]
         const traducoes = [
             '',
             '',
@@ -53,7 +53,8 @@ describe('Tradutor.getUnidadeDeMilhar', () => {
             'seis mil',
             '',
             'seis mil',
-            'mil'
+            'mil', 
+            'um mil'
         ]
 
        for (let index = 0; index < numeros.length; index++) {

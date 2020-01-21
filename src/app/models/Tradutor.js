@@ -93,9 +93,23 @@ class Tradutor {
         return unidadeString.length > 0 ? unidadeString : ''
     }
 
-/*     getExtenso() {
-        let sinal =
-    } */
+    getExtenso() {
+        let sinal = this.getSinal()
+        let dezenaDeMilhar = this.getDezenaDeMilhar()
+        let unidadeDeMilhar = this.getUnidadeDeMilhar()
+        let centena = this.getCentena()
+        let dezena = this.getDezena()
+        let unidade = this.getUnidade()
+
+        let extenso = sinal.length ? sinal + ' ' : sinal;
+        extenso += dezenaDeMilhar;
+        extenso += dezenaDeMilhar.length && unidadeDeMilhar.length ? ' e ' + unidadeDeMilhar : unidadeDeMilhar
+        extenso += (dezenaDeMilhar.length || unidadeDeMilhar.length) && centena.length ? ' e ' + centena : centena
+        extenso += (dezenaDeMilhar.length || unidadeDeMilhar.length || centena.length) && dezena.length ? ' e ' + dezena : dezena
+        extenso += (dezenaDeMilhar.length || unidadeDeMilhar.length || centena.length || dezena.length) && unidade.length ? ' e ' + unidade : unidade
+
+        return extenso
+    }
 
 }
 

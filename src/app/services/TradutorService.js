@@ -8,7 +8,7 @@ class TradutorService {
             'sessenta e quatro',
             'cento e onze',
             'seis mil e duzentos e trinta e quatro',
-            'quatorze mil e quinhetos e treze',
+            'quatorze mil e quinhentos e treze',
             'cinquenta e seis mil e trezentos e vinte e cinco',
             'menos cinquenta e seis mil e trezentos e vinte e cinco'
         ]

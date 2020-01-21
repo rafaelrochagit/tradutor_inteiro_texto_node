@@ -81,12 +81,18 @@ class Tradutor {
     getUnidade() {
         if (IntegerHelper.getTamanho(this.numeroInteiroPositivo) < 1) return ''
 
+        const unidade = this.numeroStringPositivo[this.tamanhoNumero - 1]
+
         if (IntegerHelper.getTamanho(this.numeroInteiroPositivo) >= 2) {
+
+            if (unidade == 0) return ''
+
             const dezena = this.numeroStringPositivo[this.tamanhoNumero - 2]
+            
             if (dezena == 1) return ''
         } 
 
-        const unidade = this.numeroStringPositivo[this.tamanhoNumero - 1]
+      
 
         const unidadeString = TradutorHelper.getStrUnidade(unidade)
 

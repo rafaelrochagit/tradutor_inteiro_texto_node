@@ -107,7 +107,7 @@ describe('Tradutor.getDezena', () => {
 
 describe('Tradutor.getUnidade', () => {
     it('deve retornar a unidade do numero passado no construtor do model Tradutor', () => {
-        const numeros = [5, 12, -64, -111, 6234, -14513, 56325]
+        const numeros = [5, 12, -64, -111, 6234, -14513, 56325, 500, 60, 1000, 30000]
         const traducoes = [
             'cinco',
             '',
@@ -115,7 +115,11 @@ describe('Tradutor.getUnidade', () => {
             '',
             'quatro',
             '',
-            'cinco'
+            'cinco',
+            '',
+            '',
+            '',
+            '',
         ]
 
        for (let index = 0; index < numeros.length; index++) {
@@ -128,7 +132,7 @@ describe('Tradutor.getUnidade', () => {
 
 describe('Tradutor.getExtenso', () => {
     it('deve retornar a unidade do numero passado no construtor do model Tradutor', () => {
-        const numeros = [5, 12, 64, 111, 6234, 14513, 56325, -56325]
+        const numeros = [5, 12, 64, 111, 6234, 14513, 56325, -56325, 150]
         const traducoes = [
             'cinco',
             'doze',
@@ -137,7 +141,8 @@ describe('Tradutor.getExtenso', () => {
             'seis mil e duzentos e trinta e quatro',
             'quatorze mil e quinhentos e treze',
             'cinquenta e seis mil e trezentos e vinte e cinco',
-            'menos cinquenta e seis mil e trezentos e vinte e cinco'
+            'menos cinquenta e seis mil e trezentos e vinte e cinco',
+            'cento e cinquenta'
         ]
 
        for (let index = 0; index < numeros.length; index++) {

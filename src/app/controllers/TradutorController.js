@@ -3,7 +3,7 @@ const IntegerHelper = require("../helpers/IntegerHelper")
 class TradutorController {
 
     async traduz (req, res) {
-        const numero = req.param('numero')
+        const numero = req.params.numero
         const numeroInteiro = parseInt(numero)
         if (IntegerHelper.isInteger(numero) && (numeroInteiro >= -99999 && numeroInteiro <= 99999)) {
             return res.status(200).send()

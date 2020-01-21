@@ -1,6 +1,6 @@
 const request = require("supertest")
 const app = require("../../src/app")
-const IntegerHelper = require("../../../../src/app/helpers/IntegerHelper")
+const IntegerHelper = require("../../src/app/helpers/IntegerHelper")
 
 describe('GET /', () => {
     it('Deve receber uma requisição GET com um parametro inteiro', async () => {

@@ -27,7 +27,7 @@ describe('IntegerHelper.isInteger', () => {
     })
 })
 
-describe('IntegerHelper.isInteger', () => {
+describe('IntegerHelper.getRandomIntInclusive', () => {
     it('retorna true se um numero inteiro é passado', () => {
         const min = 10
         const max = 30
@@ -35,5 +35,17 @@ describe('IntegerHelper.isInteger', () => {
         expect(result).toBeGreaterThanOrEqual(min)
         expect(result).toBeLessThanOrEqual(max)
 
+    })
+})
+
+describe('IntegerHelper.getTamanho', () => {
+    it('retorna tamanho de numero inteiro', () => {
+        const numeros = [1, 2, 4, 111, 6234, 123, -194]
+        const tamanhos = [1, 1, 1, 3, 4, 3, 3]
+
+       for (let index = 0; index < numeros.length; index++) {
+            result = IntegerHelper.getTamanho(numeros[index]);
+            expect(result).toBe(tamanhos[index]);
+        }
     })
 })

@@ -10,6 +10,11 @@ class IntegerHelper {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+    getTamanho(numero) {
+        const numeroPositivo = Math.abs(numero)
+        return numeroPositivo.toString().length
+    }
+
 }
 
 module.exports = new IntegerHelper

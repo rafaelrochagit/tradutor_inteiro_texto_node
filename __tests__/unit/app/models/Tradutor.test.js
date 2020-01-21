@@ -1,4 +1,4 @@
-const Tradutor = require("../../../../src/app/model/Tradutor")
+const Tradutor = require("../../../../src/app/models/Tradutor")
 
 describe('Tradutor.getSinal', () => {
     it('deve retornar o sinal do numero passado no construtor do model Tradutor', () => {
@@ -72,7 +72,7 @@ describe('Tradutor.getCentena', () => {
             '',
             'cento',
             'duzentos',
-            'quinhetos',
+            'quinhentos',
             'trezentos'
         ]
 

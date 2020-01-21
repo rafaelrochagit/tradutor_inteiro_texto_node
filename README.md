@@ -24,3 +24,20 @@ sudo systemctl enable docker
 ```
 docker-compose up
 ```
+
+## Chmando API
+
+```
+λ curl http://localhost:3000/1
+{ "extenso": "um" }
+```
+
+```
+λ curl http://localhost:3000/-1042
+{ "extenso": "menos mil e quarenta e dois" }
+```
+
+```
+λ curl http://localhost:3000/94587
+{ "extenso": "noventa e quatro mil e quinhentos e oitenta e sete" }
+```
